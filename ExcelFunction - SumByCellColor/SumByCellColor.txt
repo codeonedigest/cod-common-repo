@@ -1,0 +1,13 @@
+ 
+Function SumByCellColor(SumRange As Range, SumColor As Range)
+    Dim SumColorValue As Integer
+    Dim TotalSum As Single
+    SumColorValue = SumColor.Interior.ColorIndex
+    
+    For Each rCell In SumRange
+    If rCell.Interior.ColorIndex = SumColorValue Then
+    TotalSum = TotalSum + rCell.Value
+    End If
+    Next rCell
+    SumByCellColor = TotalSum
+End Function

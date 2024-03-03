@@ -1,0 +1,7 @@
+Function CellColorMatching(cell1 As Range, cell2 As Range) As Boolean
+    Dim color1 As Long
+    Dim color2 As Long
+    color1 = cell1.Interior.Color
+    color2 = cell2.Interior.Color
+    CellColorMatching = (color1 = color2)
+End Function
